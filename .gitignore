@@ -1,0 +1,86 @@
+# Java, maven, gradle, IntelliJ IDEA
+*.class
+*.log
+*.pfx
+target/
+build/
+.gradle/
+/build/
+
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.factorypath
+
+
+# node.js, reacr, vite
+node_modules/
+jspm_packages/
+
+# frontend build
+dist/
+dist-ssr/
+*.local
+
+# error logs npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# VSCode
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# security
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+**/config/application-local.properties
+**/config/local.yaml
+
+
+# DB
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.h2.db
+
+*.sql.gz
+*.sql.zip
+*.dump
+
+
+# OS
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Local archieves
+*.bak
+*.tmp
+*.swp
+*~
