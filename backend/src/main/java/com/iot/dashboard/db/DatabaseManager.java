@@ -84,7 +84,7 @@ public class DatabaseManager {
         }
     }
 
-    private Connection getConnection() throws SQLException {
+    public Connection getConnection() throws SQLException {
         return  dataSource.getConnection();
     }
 
