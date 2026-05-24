@@ -1,11 +1,11 @@
 package com.iot.dashboard.model;
 
 public class Node {
-    private int nodeId;
-    private String nodeName;
-    private String ipAddress;
-    private String location;
-    private String registeredAt;
+    private final int nodeId;
+    private final String nodeName;
+    private final String ipAddress;
+    private final String location;
+    private final String registeredAt;
 
     public Node(int nodeId, String nodeName, String ipAddress, String location, String registeredAt){
         this.nodeId = nodeId;
