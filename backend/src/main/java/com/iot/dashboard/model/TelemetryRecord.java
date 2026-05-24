@@ -5,15 +5,15 @@ public class TelemetryRecord {
     private final int nodeId;
     private final int cpuUsage;
     private final int ramUsage;
-    private final int netPingsMs;
+    private final int netPingMs;
     private final String recordedAt;
 
-    public TelemetryRecord(int recordId, int nodeId, int cpuUsage, int ramUsage, int netPingsMs, String recordedAt) {
+    public TelemetryRecord(int recordId, int nodeId, int cpuUsage, int ramUsage, int netPingMs, String recordedAt) {
         this.recordId = recordId;
         this.nodeId = nodeId;
         this.cpuUsage = cpuUsage;
         this.ramUsage = ramUsage;
-        this.netPingsMs = netPingsMs;
+        this.netPingMs = netPingMs;
         this.recordedAt = recordedAt;
     }
 
@@ -33,8 +33,8 @@ public class TelemetryRecord {
         return ramUsage;
     }
 
-    public int getNetPingsMs() {
-        return netPingsMs;
+    public int getNetPingMs() {
+        return netPingMs;
     }
 
     public String getRecordedAt() {
