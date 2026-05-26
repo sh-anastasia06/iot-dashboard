@@ -1,5 +1,8 @@
 package com.iot.dashboard.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Node {
     private final int nodeId;
     private final String nodeName;
@@ -13,6 +16,15 @@ public class Node {
         this.ipAddress = ipAddress;
         this.location = location;
         this.registeredAt = registeredAt;
+    }
+
+    public Node(String nodeName, String ipAddress, String location) {
+        this.nodeId = 0;  // DB will assign
+        this.nodeName = nodeName;
+        this.ipAddress = ipAddress;
+        this.location = location;
+        this.registeredAt = LocalDateTime.now()
+                .format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
     }
 
     public int getNodeId() {
