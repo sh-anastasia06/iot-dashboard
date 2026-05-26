@@ -136,4 +136,18 @@ public class TelemetryRepository {
 
         return Optional.empty();
     }
+
+    public boolean hasNodes() {
+        String sql = "SELECT COUNT(*) FROM nodes";
+        try (Connection connection = databaseManager.getConnection();
+             Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("failed to check nodes", e);
+        }
+        return false;
+    }
 }

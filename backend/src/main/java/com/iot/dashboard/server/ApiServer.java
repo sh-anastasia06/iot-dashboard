@@ -37,7 +37,14 @@ public class ApiServer {
             );
         });
 
-        registerRoutes();;
+        registerRoutes();
+
+        app.events(event -> {
+            event.serverStarted(() ->
+                    System.out.println("API ready at http://localhost:" + port)
+            );
+        });
+
         app.start(port);
     }
 
